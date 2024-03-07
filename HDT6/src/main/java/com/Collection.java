@@ -60,4 +60,11 @@ public class Collection {
         cardCounts.clear();
         cardTypes.clear(); // Limpiar ambos mapas
     }
+
+    public void PrintSorted() {
+        
+
+        
+        
+    }
 }
