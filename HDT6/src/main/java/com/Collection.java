@@ -62,7 +62,8 @@ public class Collection {
     }
 
     public void PrintSorted() {
-        
+        System.out.println("Colección de cartas ordenadas por tipo:");
+        cardTypes.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
 
         
         
