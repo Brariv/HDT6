@@ -19,7 +19,7 @@ public class MenuUI {
         
         int option = scanner.nextInt();
 
-        String path = "C:\\Users\\JaviC\\OneDrive\\Documents\\Datos\\HDT6\\cards_desc.txt";
+        String path = "cards_desc.txt";
         //"C:\Users\Brandon\Documents\GitHub\HDT6\HDT6\cards_desc.txt"
         Map<String, String> map = null; 
 
