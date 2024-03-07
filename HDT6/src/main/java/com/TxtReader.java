@@ -14,7 +14,7 @@ public class TxtReader {
             BufferedReader br = new BufferedReader(new FileReader(path));
             String line = br.readLine();
             while (line != null) {
-                String[] parts = line.split("|");
+                String[] parts = line.split("\\|");
                 map.put(parts[0], parts[1]);
                 line = br.readLine();
             }

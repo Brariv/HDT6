@@ -18,19 +18,24 @@ public class MenuUI {
         
         int option = scanner.nextInt();
 
-        String path = "cards_desc.txt";
+        String path = "C:\\Users\\JaviC\\OneDrive\\Documents\\Datos\\HDT6\\HDT6\\cards_desc.txt";
+        Map<String, String> map = null; 
+
         switch(option){
             case 1:
                 tipoMapa = "HashMap";
-                Map(path, tipoMapa);
+                map = Map(path, tipoMapa); 
+                print(map);
                 break;
             case 2:
                 tipoMapa = "TreeMap";
-                Map(path, tipoMapa);
+                map = Map(path, tipoMapa); 
+                print(map);
                 break;
             case 3:
                 tipoMapa = "LinkedHashMap";
-                Map(path, tipoMapa);
+                map = Map(path, tipoMapa); 
+                print(map);
                 break;
             default:
                 System.out.println("Opcion no valida");
@@ -40,16 +45,20 @@ public class MenuUI {
 
     }
 
-    private void Map(String path, String tipoMapa){
-        // Crear instancia del lector de archivos
+    private Map<String, String> Map(String path, String tipoMapa){
+        
         TxtReader txtReader = new TxtReader();
-
         
         Map<String, String> map;
 
         map = txtReader.readTxt(path, tipoMapa);
+        return map; 
     }
 
-
-    
+    private void print(Map<String, String> map) {
+       
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
 }
