@@ -83,7 +83,7 @@ public class MenuUI {
                     collection.printCollection();
                     break;
                 case 4:
-
+                    collection.PrintSorted();
                     break;
                 case 5:
                     print(map);
