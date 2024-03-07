@@ -19,7 +19,7 @@ public class MenuUI {
         
         int option = scanner.nextInt();
 
-        String path = "C:\\Users\\Brandon\\Documents\\GitHub\\HDT6\\HDT6\\cards_desc.txt";
+        String path = "C:\\Users\\JaviC\\OneDrive\\Documents\\Datos\\HDT6\\cards_desc.txt";
         //"C:\Users\Brandon\Documents\GitHub\HDT6\HDT6\cards_desc.txt"
         Map<String, String> map = null; 
 
@@ -27,22 +27,23 @@ public class MenuUI {
             case 1:
                 tipoMapa = "HashMap";
                 map = Map(path, tipoMapa); 
-                print(map);
+                
                 break;
             case 2:
                 tipoMapa = "TreeMap";
                 map = Map(path, tipoMapa); 
-                print(map);
+                
                 break;
             case 3:
                 tipoMapa = "LinkedHashMap";
                 map = Map(path, tipoMapa); 
-                print(map);
+               
                 break;
             default:
                 System.out.println("Opcion no valida");
                 break;
         }
+        Collection collection = new Collection();
         while (option != 7){
             
             System.out.println("Seleccione la opcion que desea realizar");
@@ -55,7 +56,7 @@ public class MenuUI {
             System.out.println("7. Salir");
 
             option = scanner.nextInt();
-            Collection collection = new Collection();
+            
             switch(option){
                 case 1:
                     System.out.println("Ingrese el nombre de la carta que desea buscar");
